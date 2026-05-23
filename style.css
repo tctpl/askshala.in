@@ -122,6 +122,91 @@ h1, h2, h3, h4 {
 
 .fade-in.is-visible { opacity: 1; transform: translateY(0); }
 
+/* Icons */
+.icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  margin-bottom: 16px;
+}
+
+.card-icon--light {
+  background: rgba(14, 124, 123, 0.1);
+  color: var(--teal);
+}
+
+.card-icon--dark {
+  background: rgba(14, 124, 123, 0.15);
+  color: var(--teal);
+}
+
+.card-icon .icon {
+  width: 22px;
+  height: 22px;
+}
+
+.icon--inline {
+  width: 14px;
+  height: 14px;
+  vertical-align: -2px;
+  margin-right: 4px;
+}
+
+.icon--trust {
+  width: 20px;
+  height: 20px;
+  color: var(--teal);
+}
+
+.trust-points li {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--navy);
+}
+
+.icon--quote {
+  width: 28px;
+  height: 28px;
+  color: var(--teal);
+  opacity: 0.35;
+  margin-bottom: 12px;
+}
+
+.contact-direct__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 8px;
+}
+
+.icon--contact {
+  width: 20px;
+  height: 20px;
+  color: var(--teal);
+}
+
+.icon--contact.icon--whatsapp {
+  color: #25D366;
+}
+
+.contact-direct__item .whatsapp-link {
+  margin-top: 0;
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -483,6 +568,9 @@ h1, h2, h3, h4 {
 }
 
 .deployment__chips li {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   background: var(--navy);
   color: var(--gold);
   font-size: 0.8125rem;
@@ -668,8 +756,6 @@ h1, h2, h3, h4 {
   margin-bottom: 16px;
 }
 
-.trust-points li { font-weight: 700; font-size: 1rem; color: var(--navy); }
-
 /* Pricing */
 .pricing-grid {
   display: grid;
@@ -795,8 +881,24 @@ h1, h2, h3, h4 {
 .about-block p { color: var(--text-grey); margin-bottom: 16px; font-size: 1rem; }
 .about-block__subheading { font-size: 1.125rem; color: var(--navy); margin-bottom: 16px; }
 .about-links { margin-top: 20px; }
-.about-links li { margin-bottom: 8px; }
-.about-links a { font-weight: 600; }
+.about-links li { margin-bottom: 10px; }
+.about-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+}
+
+.icon--about {
+  width: 20px;
+  height: 20px;
+  color: var(--teal);
+  flex-shrink: 0;
+}
+
+.icon--about.icon--linkedin {
+  color: #0A66C2;
+}
 
 /* Contact Form */
 .contact-form { margin-bottom: 32px; }
