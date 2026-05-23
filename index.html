@@ -4,9 +4,76 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="AskShala gives Indian schools an AI assistant that answers parent questions 24x7 from your own published content. DPDP Act 2023 compliant.">
-  <title>AskShala — Your Friendly School Expert. Always On.</title>
+  <meta name="keywords" content="AskShala, school chatbot India, parent communication, school FAQ assistant, DPDP compliant, TrilokCloud">
+  <meta name="author" content="TrilokCloud Technologies Pvt. Ltd.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0D2D52">
+  <link rel="canonical" href="https://askshala.in/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://askshala.in/">
+  <meta property="og:title" content="AskShala | Your Friendly School Expert. Always On.">
+  <meta property="og:description" content="Give parents instant answers from your school's own documents. 24x7, DPDP Act 2023 compliant, built for Indian schools.">
+  <meta property="og:image" content="https://askshala.in/assets/oxford-buddy-mascot.png">
+  <meta property="og:locale" content="en_IN">
+  <meta property="og:site_name" content="AskShala">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AskShala | Your Friendly School Expert. Always On.">
+  <meta name="twitter:description" content="Give parents instant answers from your school's own documents. 24x7, DPDP Act 2023 compliant, built for Indian schools.">
+  <meta name="twitter:image" content="https://askshala.in/assets/oxford-buddy-mascot.png">
+
+  <title>AskShala | Your Friendly School Expert. Always On.</title>
   <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://askshala.in/#organization",
+        "name": "AskShala",
+        "url": "https://askshala.in/",
+        "logo": "https://askshala.in/assets/oxford-buddy-mascot.png",
+        "email": "askshala@trilokcloud.in",
+        "parentOrganization": {
+          "@type": "Organization",
+          "name": "TrilokCloud Technologies Pvt. Ltd.",
+          "url": "https://trilokcloud.in/"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Bengaluru",
+          "addressRegion": "Karnataka",
+          "addressCountry": "IN"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://askshala.in/#website",
+        "url": "https://askshala.in/",
+        "name": "AskShala",
+        "publisher": { "@id": "https://askshala.in/#organization" }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "AskShala",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "description": "AI school information assistant that answers parent questions from school-published documents.",
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "INR",
+          "price": "6000",
+          "description": "Starter plan from Rs 6,000 per month"
+        },
+        "provider": { "@id": "https://askshala.in/#organization" }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -449,6 +516,11 @@
         <p class="section-intro section-intro--dark section-intro--center">Request a demo or ask us anything. We respond within one business day.</p>
 
         <form class="contact-form" id="contact-form" novalidate>
+          <div class="form-honeypot" aria-hidden="true">
+            <label for="company_website">Company website</label>
+            <input type="text" id="company_website" name="company_website" tabindex="-1" autocomplete="off">
+          </div>
+
           <div class="form-row">
             <div class="form-group">
               <label for="name">Name <span class="required" aria-hidden="true">*</span></label>
@@ -505,7 +577,11 @@
             <textarea id="message" name="message" rows="4"></textarea>
           </div>
 
-          <button type="submit" class="btn btn--primary btn--block">Request a Demo</button>
+          <p class="form-privacy-note">By submitting this form, you agree to our <a href="privacy.html">Privacy Policy</a>. We use your details only to respond to your enquiry.</p>
+
+          <p class="form-submit-error" id="form-submit-error" hidden role="alert"></p>
+
+          <button type="submit" class="btn btn--primary btn--block" id="form-submit-btn">Request a Demo</button>
         </form>
 
         <div class="form-success" id="form-success" hidden role="status">
@@ -571,6 +647,7 @@
         <ul class="footer-links">
           <li><a href="mailto:askshala@trilokcloud.in">askshala@trilokcloud.in</a></li>
           <li>Bengaluru, Karnataka, India</li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
         </ul>
       </div>
     </div>
@@ -583,6 +660,7 @@
     </div>
   </footer>
 
+  <script src="config.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
