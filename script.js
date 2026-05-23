@@ -7,6 +7,9 @@
   var navLinks = document.querySelectorAll('.nav__link[data-section]');
   var contactForm = document.getElementById('contact-form');
   var formSuccess = document.getElementById('form-success');
+  var formSubmitBtn = document.getElementById('form-submit-btn');
+  var formSubmitError = document.getElementById('form-submit-error');
+  var formLoadedAt = Date.now();
   var fadeSections = document.querySelectorAll('.fade-in');
 
   var sectionIds = ['how-it-works', 'for-schools', 'pricing', 'faq', 'about', 'contact'];
@@ -153,15 +156,111 @@
     return valid;
   }
 
+  function getFormPayload() {
+    return {
+      token: (window.ASKSHALA_CONFIG && window.ASKSHALA_CONFIG.FORM_SECRET) || '',
+      form_loaded_at: formLoadedAt,
+      company_website: document.getElementById('company_website').value.trim(),
+      name: document.getElementById('name').value.trim(),
+      school: document.getElementById('school').value.trim(),
+      phone: document.getElementById('phone').value.trim(),
+      email: document.getElementById('email').value.trim(),
+      students: document.getElementById('students').value,
+      referral_source: document.getElementById('referral_source').value,
+      message: document.getElementById('message').value.trim()
+    };
+  }
+
+  function isHoneypotFilled() {
+    var honeypot = document.getElementById('company_website');
+    return honeypot && honeypot.value.trim().length > 0;
+  }
+
+  function showSubmitError(message) {
+    if (!formSubmitError) return;
+    if (message) {
+      formSubmitError.hidden = false;
+      formSubmitError.textContent = message;
+    } else {
+      formSubmitError.hidden = true;
+      formSubmitError.textContent = '';
+    }
+  }
+
+  function setFormSubmitting(isSubmitting) {
+    if (!formSubmitBtn) return;
+    formSubmitBtn.disabled = isSubmitting;
+    formSubmitBtn.textContent = isSubmitting ? 'Sending...' : 'Request a Demo';
+  }
+
+  function showFormSuccess() {
+    contactForm.hidden = true;
+    formSuccess.hidden = false;
+    formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+
+  function submitToGoogleSheet(payload) {
+    var config = window.ASKSHALA_CONFIG || {};
+    var endpoint = config.GOOGLE_SHEET_URL;
+
+    if (!endpoint || !config.FORM_SECRET) {
+      return Promise.resolve({ skipped: true });
+    }
+
+    return fetch(endpoint, {
+      method: 'POST',
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+      body: JSON.stringify(payload)
+    }).then(function (response) {
+      return response.json().then(function (data) {
+        if (!response.ok || !data.success) {
+          throw new Error(data.error || 'Unable to submit your request right now.');
+        }
+        return data;
+      });
+    });
+  }
+
   if (contactForm) {
     contactForm.addEventListener('submit', function (e) {
       e.preventDefault();
+      showSubmitError('');
 
       if (!validateForm()) return;
 
-      contactForm.hidden = true;
-      formSuccess.hidden = false;
-      formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      if (isHoneypotFilled()) {
+        showFormSuccess();
+        return;
+      }
+
+      var config = window.ASKSHALA_CONFIG || {};
+      var googleConfigured = Boolean(config.GOOGLE_SHEET_URL && config.FORM_SECRET);
+
+      if (googleConfigured && Date.now() - formLoadedAt < 3000) {
+        showSubmitError('Please take a moment to review the form, then try again.');
+        return;
+      }
+
+      if (!googleConfigured) {
+        showFormSuccess();
+        return;
+      }
+
+      setFormSubmitting(true);
+
+      submitToGoogleSheet(getFormPayload())
+        .then(function () {
+          showFormSuccess();
+        })
+        .catch(function (error) {
+          showSubmitError(
+            error.message ||
+              'Something went wrong. Please email us at askshala@trilokcloud.in or WhatsApp us instead.'
+          );
+        })
+        .finally(function () {
+          setFormSubmitting(false);
+        });
     });
 
     Object.keys(validators).forEach(function (fieldId) {

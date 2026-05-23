@@ -43,21 +43,45 @@ Open [http://localhost:8090](http://localhost:8090) in your browser.
 
 5. Back in GitHub Pages settings, enter `askshala.in` as the custom domain and wait for DNS to propagate (up to 24 hours).
 
+## Contact Form → Google Sheet (optional, later)
+
+Google Sheets integration is prepared but not required for the site to work. Until you configure it, the contact form validates on the client and shows a success message. Parents and schools can still reach you via email and WhatsApp.
+
+When you are ready, follow the steps in `google-apps-script/Code.gs` and `config.example.js`.
+
+## SEO
+
+The site includes:
+
+- Open Graph and Twitter Card meta tags on the home page
+- JSON-LD structured data (Organization, WebSite, SoftwareApplication)
+- `robots.txt` and `sitemap.xml` at the site root
+- A standalone `privacy.html` page linked from the footer and contact form
+
+Submit `https://askshala.in/sitemap.xml` in [Google Search Console](https://search.google.com/search-console) after deploy.
+
 ## File Structure
 
 ```
-index.html          Main landing page
-style.css           All styles
-script.js           Navigation, scroll, form validation
-CNAME               Custom domain for GitHub Pages
-404.html            Branded not-found page
+index.html              Main landing page
+privacy.html            Marketing site privacy policy
+style.css               All styles
+script.js               Navigation, scroll, form validation and submit
+config.js               Google Sheet URL and form secret (edit after deploy)
+config.example.js       Template for config.js
+google-apps-script/
+  Code.gs               Apps Script for sheet integration
+robots.txt              Search engine crawl rules
+sitemap.xml             Sitemap for askshala.in
+CNAME                   Custom domain for GitHub Pages
+404.html                Branded not-found page
 assets/
   oxford-buddy-mascot.png
   favicon.ico
-README.md           This file
+README.md               This file
 ```
 
 ## Notes
 
-- The contact form validates on the client side only and does not submit to a server.
 - All asset paths are relative for GitHub Pages compatibility.
+- School deployments of AskShala use a separate privacy notice for chat users; `privacy.html` covers the marketing website only.
