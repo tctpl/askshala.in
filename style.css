@@ -900,6 +900,10 @@ h1, h2, h3, h4 {
   color: #0A66C2;
 }
 
+.icon--about.icon--x {
+  color: var(--text-dark);
+}
+
 /* Contact Form */
 .contact-form { margin-bottom: 32px; }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
