@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" fill="none" role="img" aria-label="AskShala admin usage statistics panel">
+  <defs>
+    <linearGradient id="admin-accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0E7C7B"/>
+      <stop offset="100%" stop-color="#0D2D52"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="400" rx="16" fill="#080F1A"/>
+  <rect x="12" y="12" width="616" height="376" rx="12" fill="#0D1B2A" stroke="rgba(14,124,123,0.35)" stroke-width="1.5"/>
+  <rect x="28" y="28" width="584" height="44" rx="8" fill="#112240"/>
+  <circle cx="48" cy="50" r="10" fill="url(#admin-accent)"/>
+  <text x="66" y="54" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="13" font-weight="600">AskShala Admin</text>
+  <rect x="468" y="38" width="128" height="24" rx="6" fill="#1A3352"/>
+  <text x="480" y="54" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10">Your school</text>
+  <rect x="28" y="84" width="584" height="36" rx="8" fill="#112240"/>
+  <text x="44" y="106" fill="#64748B" font-family="system-ui, sans-serif" font-size="11">Upload</text>
+  <text x="108" y="106" fill="#64748B" font-family="system-ui, sans-serif" font-size="11">Knowledge Base</text>
+  <rect x="200" y="90" width="88" height="24" rx="6" fill="rgba(14,124,123,0.22)"/>
+  <text x="212" y="106" fill="#5EEAD4" font-family="system-ui, sans-serif" font-size="11" font-weight="600">Usage Stats</text>
+  <text x="312" y="106" fill="#64748B" font-family="system-ui, sans-serif" font-size="11">Help</text>
+  <rect x="28" y="136" width="136" height="96" rx="10" fill="#112240" stroke="rgba(255,255,255,0.06)"/>
+  <text x="44" y="158" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10">Total Questions</text>
+  <text x="44" y="188" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="26" font-weight="700">1,284</text>
+  <text x="44" y="212" fill="#64748B" font-family="system-ui, sans-serif" font-size="9">Since setup</text>
+  <rect x="180" y="136" width="136" height="96" rx="10" fill="#112240" stroke="rgba(255,255,255,0.06)"/>
+  <text x="196" y="158" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10">Resolved</text>
+  <text x="196" y="188" fill="#0E7C7B" font-family="system-ui, sans-serif" font-size="26" font-weight="700">892</text>
+  <text x="196" y="212" fill="#64748B" font-family="system-ui, sans-serif" font-size="9">Answered from docs</text>
+  <rect x="332" y="136" width="136" height="96" rx="10" fill="#112240" stroke="rgba(255,255,255,0.06)"/>
+  <text x="348" y="158" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10">Fallback Rate</text>
+  <text x="348" y="188" fill="#F4A216" font-family="system-ui, sans-serif" font-size="26" font-weight="700">18%</text>
+  <text x="348" y="212" fill="#64748B" font-family="system-ui, sans-serif" font-size="9">Directed to school</text>
+  <rect x="484" y="136" width="128" height="96" rx="10" fill="#112240" stroke="rgba(255,255,255,0.06)"/>
+  <text x="500" y="158" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10">Questions Today</text>
+  <text x="500" y="188" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="26" font-weight="700">47</text>
+  <text x="500" y="212" fill="#64748B" font-family="system-ui, sans-serif" font-size="9">Admission season</text>
+  <rect x="28" y="248" width="360" height="124" rx="10" fill="#112240" stroke="rgba(255,255,255,0.06)"/>
+  <text x="44" y="272" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10">Questions this week</text>
+  <rect x="52" y="320" width="28" height="36" rx="4" fill="#1A3352"/>
+  <rect x="92" y="300" width="28" height="56" rx="4" fill="#1A3352"/>
+  <rect x="132" y="288" width="28" height="68" rx="4" fill="url(#admin-accent)"/>
+  <rect x="172" y="308" width="28" height="48" rx="4" fill="#1A3352"/>
+  <rect x="212" y="296" width="28" height="60" rx="4" fill="#1A3352"/>
+  <rect x="252" y="276" width="28" height="80" rx="4" fill="url(#admin-accent)"/>
+  <rect x="292" y="304" width="28" height="52" rx="4" fill="#1A3352"/>
+  <rect x="332" y="292" width="28" height="64" rx="4" fill="#1A3352"/>
+  <rect x="404" y="248" width="208" height="124" rx="10" fill="#112240" stroke="rgba(255,255,255,0.06)"/>
+  <text x="420" y="272" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10">Avg Response Time</text>
+  <text x="420" y="310" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="32" font-weight="700">2.1s</text>
+  <text x="420" y="334" fill="#0E7C7B" font-family="system-ui, sans-serif" font-size="10">Under 3s is normal</text>
+  <rect x="420" y="348" width="168" height="6" rx="3" fill="#1A3352"/>
+  <rect x="420" y="348" width="120" height="6" rx="3" fill="url(#admin-accent)"/>
+  <text x="320" y="378" fill="#64748B" font-family="system-ui, sans-serif" font-size="9" text-anchor="middle">Anonymous stats. No question text stored.</text>
+</svg>
