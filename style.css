@@ -417,7 +417,14 @@ h1, h2, h3, h4 {
 .hero__heading {
   font-size: clamp(2rem, 5vw, 3rem);
   color: var(--white);
-  margin-bottom: 20px;
+  margin-bottom: 12px;
+}
+
+.hero__tagline {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--gold);
+  margin-bottom: 16px;
 }
 
 .hero__subtext {
@@ -545,6 +552,97 @@ h1, h2, h3, h4 {
 
 .flow__item--highlight { background: var(--teal-dark); border-color: var(--teal); }
 .flow__arrow { font-size: 1.25rem; color: var(--gold); font-weight: 700; }
+
+/* Embed options */
+.embed-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.embed-card {
+  background: var(--white);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-card);
+  padding: 28px 28px 28px 32px;
+  border-left: 4px solid var(--teal);
+}
+
+.embed-card__title {
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--text-dark);
+}
+
+.embed-card__body { font-size: 0.9375rem; color: var(--text-grey); }
+
+/* Use cases */
+.use-cases-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.use-case-card {
+  background: var(--white);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-card);
+  padding: 28px 28px 28px 32px;
+  border-left: 4px solid var(--teal);
+}
+
+.use-case-card__title {
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--text-dark);
+}
+
+.use-case-card__body { font-size: 0.9375rem; color: var(--text-grey); }
+
+/* Privacy and trust */
+.privacy-trust-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  list-style: none;
+  margin: 0 0 24px;
+  padding: 0;
+}
+
+.privacy-trust-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-card);
+  padding: 20px;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.5;
+}
+
+.privacy-trust-item .icon--trust {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--gold);
+}
+
+.privacy-trust-note {
+  text-align: center;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.55);
+  max-width: 640px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.privacy-trust-note a { color: var(--gold); font-weight: 600; }
 
 /* First Deployment */
 .deployment__grid {
@@ -1204,6 +1302,9 @@ h1, h2, h3, h4 {
   .nav__link { display: block; padding: 14px 0; }
   .btn--nav { width: 100%; }
   .problem-grid { grid-template-columns: 1fr; }
+  .embed-grid { grid-template-columns: 1fr; }
+  .use-cases-grid { grid-template-columns: 1fr; }
+  .privacy-trust-grid { grid-template-columns: 1fr; }
   .features-grid { grid-template-columns: 1fr; }
   .flow { flex-direction: column; }
   .flow__arrow { transform: rotate(90deg); }
