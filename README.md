@@ -76,8 +76,9 @@ sitemap.xml             Sitemap for askshala.in
 CNAME                   Custom domain for GitHub Pages
 404.html                Branded not-found page
 assets/
-  oxford-buddy-mascot.png
-  favicon.ico
+  askshala-mascot.png
+  askshala-chat-widget.png
+  askshala-admin-stats.svg
 README.md               This file
 ```
 
