@@ -69,9 +69,9 @@
         "description": "AI school information assistant for Indian K-12 schools. Answers parent and student questions from school-published documents.",
         "offers": {
           "@type": "Offer",
-          "priceCurrency": "INR",
-          "price": "6000",
-          "description": "Starter plan from Rs 6,000 per month"
+          "url": "https://askshala.in/#contact",
+          "availability": "https://schema.org/OnlineOnly",
+          "description": "Custom pricing based on school size and requirements. Discussed after a demo."
         },
         "provider": { "@id": "https://askshala.in/#organization" }
       }
@@ -98,7 +98,6 @@
       <ul class="nav__menu" id="nav-menu">
         <li><a href="#how-it-works" class="nav__link" data-section="how-it-works">How It Works</a></li>
         <li><a href="#for-schools" class="nav__link" data-section="for-schools">For Schools</a></li>
-        <li><a href="#pricing" class="nav__link" data-section="pricing">Pricing</a></li>
         <li><a href="#faq" class="nav__link" data-section="faq">FAQ</a></li>
         <li><a href="#about" class="nav__link" data-section="about">About</a></li>
         <li><a href="#contact" class="nav__link" data-section="contact">Contact</a></li>
@@ -356,8 +355,15 @@
         <div class="admin-panel">
           <div class="admin-panel__grid">
             <div class="admin-panel__text">
-              <p class="section-label section-label--teal">ADMIN PANEL</p>
-              <h3 class="admin-panel__heading">Upload content and track usage without calling your IT team</h3>
+              <div class="card-header-row">
+                <div class="card-icon card-icon--dark" aria-hidden="true">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+                </div>
+                <div class="card-header-row__text">
+                  <p class="section-label section-label--teal">ADMIN PANEL</p>
+                  <h3 class="admin-panel__heading">Upload content and track usage without calling your IT team</h3>
+                </div>
+              </div>
               <p class="admin-panel__intro">School staff manage documents through a simple web panel. Usage stats show how parents are using the assistant, with fully anonymised analytics and no question text stored in reports.</p>
               <ul class="admin-panel__list">
                 <li>Upload, replace, and remove documents independently</li>
@@ -511,72 +517,23 @@
       </div>
     </section>
 
-    <!-- SECTION 8 — PRICING -->
-    <section class="section section--dark fade-in" id="pricing" aria-labelledby="pricing-heading">
-      <div class="container">
-        <p class="section-label section-label--teal">PRICING</p>
-        <h2 id="pricing-heading" class="section-heading section-heading--light">Simple monthly pricing.</h2>
-        <p class="section-intro section-intro--dark">No setup fees. No annual contracts required. Cancel any month. The first 9 schools to sign receive founding school pricing locked in for life as long as the subscription continues.</p>
+    <!-- SECTION 8 — PLANS (pricing discussed in demo) -->
+    <section class="section section--dark fade-in" id="plans" aria-labelledby="plans-heading">
+      <div class="container pricing-cta">
+        <p class="section-label section-label--teal">PLANS</p>
+        <h2 id="plans-heading" class="section-heading section-heading--light">Custom pricing for your school</h2>
+        <p class="section-intro section-intro--dark">Every school is different. Student count, document volume, and support needs all shape what AskShala costs. We share a clear proposal after a short demo and a quick conversation about your requirements.</p>
 
-        <div class="pricing-grid">
-          <article class="pricing-card">
-            <h3 class="pricing-card__name">Starter</h3>
-            <p class="pricing-card__price">Rs 6,000 <span class="pricing-card__period">per month</span></p>
-            <p class="pricing-card__founding">Founding school price Rs 4,995 per month<br>
-            Available to the first 9 schools only<br>
-            Locked in for life as long as subscription continues</p>
-            <p class="pricing-card__audience">For schools up to 500 students</p>
-            <ul class="pricing-card__features">
-              <li>School-branded assistant with your own name</li>
-              <li>Up to 15 documents in the knowledge base (max 1MB per document)</li>
-              <li>6 custom quick-question prompts in the widget</li>
-              <li>Admin panel, upload and manage content independently</li>
-              <li>Basic query analytics, volume, resolution rate, top questions</li>
-              <li>Email support, response within 2 business days</li>
-              <li>Onboarding included, live within 1 week</li>
-            </ul>
-            <a href="#contact" class="btn btn--outline btn--block">Apply for a Free Pilot</a>
-          </article>
+        <ul class="pricing-cta__points">
+          <li>No setup fee to get started</li>
+          <li>Free 4-week pilot before any commercial commitment</li>
+          <li>Monthly subscription with no long-term lock-in</li>
+          <li>Founding school terms available for early partners</li>
+        </ul>
 
-          <article class="pricing-card pricing-card--featured">
-            <span class="pricing-card__badge">Most Popular</span>
-            <h3 class="pricing-card__name">Standard</h3>
-            <p class="pricing-card__price">Rs 9,000 <span class="pricing-card__period">per month</span></p>
-            <p class="pricing-card__founding">Founding school price Rs 7,500 per month<br>
-            Available to the first 9 schools only<br>
-            Locked in for life as long as subscription continues</p>
-            <p class="pricing-card__audience">For schools between 500 and 1,500 students</p>
-            <ul class="pricing-card__features">
-              <li>Everything in Starter, plus</li>
-              <li>Up to 25 documents in the knowledge base (max 1MB per document)</li>
-              <li>15 custom quick-question prompts</li>
-              <li>Week 4 usage report, formal PDF covering query volume, top questions, resolution rate, and content gaps</li>
-              <li>Monthly content review reminder</li>
-              <li>WhatsApp support, 9am to 6pm Monday to Saturday</li>
-              <li>Priority support, response within 4 business hours</li>
-              <li>Query export for your own records</li>
-            </ul>
-            <a href="#contact" class="btn btn--primary btn--block">Apply for a Free Pilot</a>
-          </article>
-
-          <article class="pricing-card">
-            <h3 class="pricing-card__name">Professional</h3>
-            <p class="pricing-card__price pricing-card__price--contact">For large schools and chains</p>
-            <p class="pricing-card__audience">Pricing based on your institution's requirements</p>
-            <ul class="pricing-card__features">
-              <li>Everything in Standard, plus</li>
-              <li>Expanded document library, pricing based on volume</li>
-              <li>Multi-campus deployment under one agreement</li>
-              <li>Dedicated onboarding manager</li>
-              <li>Custom assistant personality per campus</li>
-              <li>Full brand alignment, colours, widget style</li>
-              <li>Quarterly business review</li>
-              <li>Group pricing for 5 or more institutions</li>
-              <li>Data Processing Agreement available</li>
-              <li>Priority feature requests</li>
-            </ul>
-            <a href="#contact" class="btn btn--outline btn--block">Contact Us</a>
-          </article>
+        <div class="pricing-cta__actions">
+          <a href="#contact" class="btn btn--primary">Request a Demo</a>
+          <a href="mailto:askshala@trilokcloud.in" class="btn btn--outline">Email Us Directly</a>
         </div>
       </div>
     </section>
@@ -805,7 +762,6 @@
         <ul class="footer-links">
           <li><a href="#how-it-works">How It Works</a></li>
           <li><a href="#for-schools">For Schools</a></li>
-          <li><a href="#pricing">Pricing</a></li>
           <li><a href="#faq">FAQ</a></li>
           <li><a href="#for-schools">First Deployment</a></li>
         </ul>

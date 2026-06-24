@@ -75,6 +75,8 @@ robots.txt              Search engine crawl rules
 sitemap.xml             Sitemap for askshala.in
 CNAME                   Custom domain for GitHub Pages
 404.html                Branded not-found page
+internal/
+  pricing-tiers.html    Internal sales reference (not linked publicly, blocked in robots.txt)
 assets/
   askshala-mascot.png
   askshala-chat-widget.png

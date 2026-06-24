@@ -42,6 +42,69 @@ body {
 
 img { max-width: 100%; height: auto; display: block; }
 
+/* Card layout: icon and title on one row, body below */
+.problem-card,
+.embed-card,
+.use-case-card,
+.feature-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 14px;
+  align-items: center;
+}
+
+.problem-card > .card-icon,
+.embed-card > .card-icon,
+.use-case-card > .card-icon,
+.feature-card > .card-icon {
+  grid-column: 1;
+  grid-row: 1;
+  margin-bottom: 0;
+}
+
+.problem-card__title,
+.embed-card__title,
+.use-case-card__title,
+.feature-card__title {
+  grid-column: 2;
+  grid-row: 1;
+  margin-bottom: 0;
+}
+
+.problem-card__body,
+.embed-card__body,
+.use-case-card__body,
+.feature-card__body {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  margin-top: 12px;
+}
+
+.card-header-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.card-header-row .card-icon {
+  margin-bottom: 0;
+  flex-shrink: 0;
+}
+
+.card-header-row__text {
+  flex: 1;
+  min-width: 0;
+}
+
+.card-header-row__text .section-label {
+  margin-bottom: 6px;
+}
+
+.card-header-row__text .admin-panel__heading {
+  margin-bottom: 0;
+}
+
 a {
   color: var(--teal);
   text-decoration: none;
@@ -293,13 +356,17 @@ h1, h2, h3, h4 {
   display: inline-flex;
   align-items: center;
   gap: 10px;
+  flex-wrap: nowrap;
   text-decoration: none;
   line-height: 1;
+  flex-shrink: 0;
 }
 
 .nav__logo-img {
   height: 44px;
-  width: auto;
+  width: 44px;
+  max-width: none;
+  object-fit: contain;
   display: block;
   flex-shrink: 0;
 }
@@ -505,7 +572,6 @@ h1, h2, h3, h4 {
   font-family: var(--font-body);
   font-size: 1.0625rem;
   font-weight: 700;
-  margin-bottom: 8px;
   color: var(--text-dark);
 }
 
@@ -532,18 +598,39 @@ h1, h2, h3, h4 {
   grid-template-columns: repeat(4, 1fr);
 }
 
+.step {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 12px;
+  align-items: center;
+}
+
 .step__number {
-  display: block;
+  grid-column: 1;
+  grid-row: 1;
   font-family: var(--font-heading);
-  font-size: 3rem;
+  font-size: 2.25rem;
   font-weight: 700;
   color: var(--gold);
   line-height: 1;
-  margin-bottom: 16px;
+  margin-bottom: 0;
 }
 
-.step__title { font-size: 1.25rem; color: var(--white); margin-bottom: 12px; }
-.step__body { font-size: 0.9375rem; color: rgba(255, 255, 255, 0.65); }
+.step__title {
+  grid-column: 2;
+  grid-row: 1;
+  font-size: 1.25rem;
+  color: var(--white);
+  margin-bottom: 0;
+}
+
+.step__body {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  margin-top: 12px;
+  font-size: 0.9375rem;
+  color: rgba(255, 255, 255, 0.65);
+}
 
 .flow {
   display: flex;
@@ -622,7 +709,6 @@ h1, h2, h3, h4 {
   font-family: var(--font-body);
   font-size: 1.0625rem;
   font-weight: 700;
-  margin-bottom: 8px;
   color: var(--text-dark);
 }
 
@@ -647,7 +733,6 @@ h1, h2, h3, h4 {
   font-family: var(--font-body);
   font-size: 1.0625rem;
   font-weight: 700;
-  margin-bottom: 8px;
   color: var(--text-dark);
 }
 
@@ -759,7 +844,6 @@ h1, h2, h3, h4 {
   font-size: 1.0625rem;
   font-weight: 700;
   color: var(--white);
-  margin-bottom: 12px;
 }
 
 .feature-card__body { font-size: 0.9375rem; color: rgba(255, 255, 255, 0.6); }
@@ -782,7 +866,6 @@ h1, h2, h3, h4 {
   font-family: var(--font-heading);
   font-size: 1.5rem;
   color: var(--white);
-  margin-bottom: 16px;
 }
 
 .admin-panel__intro {
@@ -972,7 +1055,47 @@ h1, h2, h3, h4 {
   margin-bottom: 16px;
 }
 
-/* Pricing */
+/* Pricing (public CTA and internal tier reference page) */
+.pricing-cta {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.pricing-cta__points {
+  list-style: none;
+  margin: 0 0 32px;
+  padding: 0;
+  text-align: left;
+  display: inline-block;
+}
+
+.pricing-cta__points li {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 10px;
+  font-size: 0.9375rem;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.pricing-cta__points li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--teal);
+}
+
+.pricing-cta__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
 .pricing-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1266,7 +1389,9 @@ h1, h2, h3, h4 {
 
 .footer-logo__img {
   height: 48px;
-  width: auto;
+  width: 48px;
+  max-width: none;
+  object-fit: contain;
   display: block;
 }
 

@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /internal/
 
 Sitemap: https://askshala.in/sitemap.xml

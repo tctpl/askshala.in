@@ -12,7 +12,7 @@
   var formLoadedAt = Date.now();
   var fadeSections = document.querySelectorAll('.fade-in');
 
-  var sectionIds = ['how-it-works', 'for-schools', 'pricing', 'faq', 'about', 'contact'];
+  var sectionIds = ['how-it-works', 'for-schools', 'plans', 'faq', 'about', 'contact'];
 
   /* --- 1. Sticky nav: transparent to dark navy on scroll --- */
   function updateHeader() {
